@@ -113,33 +113,6 @@ body {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/assets/images/hero.png') center/cover no-repeat;
 }
 
-.video-container {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255,255,255,0.7);
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.play-button:hover {
-    background-color: rgba(255,255,255,0.9);
-    transform: translate(-50%, -50%) scale(1.1);
-}
-
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -182,3 +155,80 @@ body {
     line-height: 0;
     transform: rotate(180deg);
 }
+
+/* Safari pattern for the about us page */
+
+    @keyframes fade-in-up {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes fade-in-left {
+        0% {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes fade-in-right {
+        0% {
+            opacity: 0;
+            transform: translateX(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes bounce-slow {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+    
+    .animate-fade-in-up {
+        animation: fade-in-up 0.8s ease-out forwards;
+    }
+    
+    .animate-fade-in-left {
+        animation: fade-in-left 0.8s ease-out forwards;
+    }
+    
+    .animate-fade-in-right {
+        animation: fade-in-right 0.8s ease-out forwards;
+    }
+    
+    .animate-bounce-slow {
+        animation: bounce-slow 3s infinite;
+    }
+    
+    .animate-fade-in {
+        animation: fade-in 1s ease-out forwards;
+    }
+    
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    .styled-heading {
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }

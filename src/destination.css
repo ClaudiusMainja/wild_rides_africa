@@ -118,3 +118,114 @@
   .parallax-bg {
     transform: translateZ(-10px) scale(2);
   }
+
+
+  /* Hero Section CSS */
+
+/* Essential animations */
+@keyframes subtle-zoom {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes scroll-down {
+    0% { transform: translateY(0); opacity: 1; }
+    75% { transform: translateY(12px); opacity: 0; }
+    76% { transform: translateY(-12px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse-slow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.animate-subtle-zoom {
+    animation: subtle-zoom 20s infinite ease-in-out;
+}
+
+.animate-scroll-down {
+    animation: scroll-down 2.5s infinite;
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 3s infinite ease-in-out;
+}
+
+/* Entrance animations */
+.heading-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: heading-reveal 0.7s forwards ease-out;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-400 {
+    animation-delay: 0.4s;
+}
+
+.delay-500 {
+    animation-delay: 0.5s;
+}
+
+.delay-700 {
+    animation-delay: 0.7s;
+}
+
+.delay-900 {
+    animation-delay: 0.9s;
+}
+
+@keyframes heading-reveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fade-in-up 0.7s forwards ease-out;
+}
+
+@keyframes fade-in-up {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slide-in-left 1s forwards cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+@keyframes slide-in-left {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slide-in-right 1s forwards cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+@keyframes slide-in-right {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Safari tracks animation */
+.track-element {
+    transition: transform 5s ease-in-out;
+}
